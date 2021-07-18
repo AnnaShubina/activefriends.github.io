@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Active Friends</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="intro">
+  <div class="layout layout--l">
+    <header class="header">
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="logo" width="39" height="32">
+      </div>
+      <button class="link hidden-from-l js-menu-open"><img src="img/burger.svg" alt="menu" width="42" height="11">
+      </button>
+      <nav class="nav hidden-to-l">
+        <div class="nav__link" data-ref="video">Видео</div>
+        <div class="nav__link" data-ref="opportunities">Возможности</div>
+        <div class="nav__link" data-ref="events">Мероприятия</div>
+        <div class="nav__link" data-ref="impressions">Впечатления</div>
+      </nav>
+      <div class="menuMobile js-menu">
+        <div class="menuMobile__header">
+          <div class="header__logo">
+            <img class="hidden-from-s" src="img/logo.svg" alt="logo" width="39" height="32">
+          </div>
+          <button class="link js-menu-close"><img src="img/close.svg" alt="close" width="16" height="16"></button>
+        </div>
+        <div class="menuMobile__list">
+          <nav class="nav">
+            <div class="nav__link js-menu-close" data-ref="video">Видео</div>
+            <div class="nav__link js-menu-close" data-ref="opportunities">Возможности</div>
+            <div class="nav__link js-menu-close" data-ref="events">Мероприятия</div>
+            <div class="nav__link js-menu-close" data-ref="impressions">Впечатления</div>
+          </nav>
+        </div>
+        <div class="menuMobile__footer">
+          <div class="qr">
+            <div class="qr__item">
+              <div class="qr__title">AppStore</div>
+              <img src="img/app-store-qr.png" srcset="img/app-store-qr@2x.png 2x" alt="app store" width="86"
+                   height="86">
+            </div>
+            <div class="qr__item">
+              <div class="qr__title">Google Play</div>
+              <img src="img/google-play-qr.png" srcset="img/google-play-qr@2x.png 2x" alt="google play" width="86"
+                   height="86">
+            </div>
+          </div>
+          <div class="social">
+            <div class="social__item">
+              <img src="img/instagram.svg" alt="инстаграм" width="24" height="24">
+              <div>instagram</div>
+            </div>
+            <div class="social__item">
+              <img src="img/vk.svg" alt="вконтакте" width="24" height="24">
+              <div>vkontakte</div>
+            </div>
+            <div class="social__item">
+              <img src="img/fb.svg" alt="фейсбук" width="24" height="24">
+              <div>facebook</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="intro__inner">
+      <div class="intro__content">
+        <h1 class="title-l">
+          <span>Active</span><br>
+          <span class="title__left">Friends</span>
+        </h1>
+        <div class="intro__description">
+          <p class="text">Участвуй в&nbsp;самых классных спортивных мероприятиях по&nbsp;всей России, знакомься и&nbsp;собирай
+            свои команды для занятий любимым видом спорта</p>
+        </div>
+        <div class="intro__media hidden-to-l">
+          <a href="#" class="link link--app">
+            <img src="img/app-store.svg" alt="app store" width="141" height="48">
+          </a>
+          <a href="#" class="link link--app">
+            <img src="img/google-play.svg" alt="google play" width="162" height="48">
+          </a>
+        </div>
+        <a href="#" class="link link--load intro__link hidden-to-l"></a>
+      </div>
+      <div class="intro__pic">
+        <picture>
+          <source srcset="img/intro_phone_mob.png, img/intro_phone_mob@2x.png 2x" media="(max-width: 640px)">
+          <source srcset="img/intro_phone.png, img/intro_phone@2x.png 2x">
+          <img src="img/intro_phone.png" srcset="img/intro_phone@2x.png 2x" alt="intro pic">
+        </picture>
+      </div>
+      <div class="intro__media hidden-from-l">
+        <a href="#" class="link link--app">
+          <img src="img/app-store.svg" alt="app store" width="141" height="48">
+        </a>
+        <a href="#" class="link link--app">
+          <img src="img/google-play.svg" alt="google play" width="162" height="48">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<main class="main">
+  <section class="box box--l layout">
+    <div class="cells cells--indent">
+      <div class="cell__2 cell__l-4">
+        <div class="box__header box__header--xl">
+          <h2 class="title">Станьте ближе</h2>
+        </div>
+        <p class="text" style="max-width: 562px;">Добро пожаловать!<br>Ты&nbsp;еще не&nbsp;скачал приложение, а&nbsp;мы&nbsp;уже
+          тебе рады!
+          Посмотри, какие мероприятия придутся тебе по&nbsp;душе, и&nbsp;присоединяйся! Больше 100 мероприятий активно
+          прямо сейчас.</p>
+        <div class="box__footer hidden-to-s">
+          <button class="btn js-popover">Скачать приложение</button>
+<!--          <div class="popover">-->
+<!--            <div class="title-xs popover__title">Выбери подходящий store</div>-->
+<!--            <div class="popover__footer">-->
+<!--              <a href="#" class="link link&#45;&#45;app">-->
+<!--                <img src="img/app-store.svg" alt="app store" width="141" height="48">-->
+<!--              </a>-->
+<!--              <a href="#" class="link link&#45;&#45;app">-->
+<!--                <img src="img/google-play.svg" alt="google play" width="162" height="48">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+      </div>
+      <div class="cell__2 cell__l-4">
+        <div class="cardWrap">
+          <article class="card">
+            <header class="user">
+              <img class="user__pic" src="img/elsa.png" srcset="img/elsa@2x.png 2x" alt="tan_elsa">
+              <h5 class="title-xs">tan_elsa</h5>
+            </header>
+            <div class="card__item">22&nbsp;Августа пройдет ежегодный турнир по теннису с&nbsp;участием людей
+              разного возраста!
+            </div>
+            <div class="card__item">
+              <img class="card__pic" src="img/tennis.png" srcset="img/tennis@2x.png 2x" alt="tennis">
+            </div>
+            <div class="card__item text-right">56 нравится, 4 комментария</div>
+          </article>
+          <article class="card card--bottomStick card--aside">
+            <header class="user">
+              <img class="user__pic" src="img/masha.png" srcset="img/masha@2x.png 2x" alt="masha_caz">
+              <h5 class="title-xs">masha_caz</h5>
+            </header>
+            <div class="card__item">Все, надо участвовать! Я&nbsp;поеду, кто со&nbsp;мной!</div>
+            <div class="card__footer">
+              <div class="flex-center">
+                <img src="img/heart.svg" alt="like" width="24" height="21">
+                <span class="ml-10">Нравится</span>
+              </div>
+              <div class="flex-center ml-10">
+                <img src="img/comment.svg" alt="like" width="24" height="16">
+                <span class="ml-10">Комментарий</span>
+              </div>
+            </div>
+          </article>
+          <img class="cardWrap__decor" src="img/closer_decor.svg" alt="">
+          <img class="cardWrap__ellipse" src="img/closer_ellipse.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="video" class="box box--l layout layout--l">
+    <div class="videoWrapper">
+      <img class="videoWrapper__back" src="img/video_back.svg" alt="">
+      <div class="videoWrapper__inner">
+        <div class="videoWrapper__overlay"></div>
+        <button class="videoWrapper__play">
+          <svg width="128" height="61" viewBox="0 0 128 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M70.7615 55.713C105.905 46.2962 131.366 27.3595 127.63 13.4167C123.894 -0.526155 92.3762 -4.1952 57.2325 5.22161C22.0889 14.6384 -3.37212 33.5751 0.363808 47.5179C4.09973 61.4608 35.6179 65.1298 70.7615 55.713ZM61.1514 20.2349L74.5514 28.9911C75.1554 29.3857 75.1554 30.2706 74.5514 30.6653L61.1514 39.4215C60.4863 39.8561 59.6044 39.3789 59.6044 38.5844V21.072C59.6044 20.2775 60.4863 19.8003 61.1514 20.2349Z"
+                  fill="currentColor"/>
+          </svg>
+        </button>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7ZEsoV7kWAQ" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+  <section id="opportunities" class="box layout">
+    <div class="box__header">
+      <h2 class="title">
+        <span>Active Friends</span><br>
+        <span class="title__left title__left--m title-left--mobStick">это новые</span> <span class="text-brand">возможности</span>
+      </h2>
+    </div>
+    <h3 class="title-s hidden-from-s box__header-mob">Находи друзей и&nbsp;создавай команды</h3>
+    <div class="cells cells--indent scrollBox">
+      <div class="cell__2 cell__l-4 scrollBox__picWrap">
+        <div class="scrollBox__pic">
+          <div class="phoneBox">
+            <picture>
+              <source srcset="img/phone1_mob.png, img/phone1_mob@2x.png 2x" media="(max-width: 640px)">
+              <source srcset="img/phone1.png, img/phone1@2x.png 2x">
+              <img class="phoneBox__img" src="img/phone1.png" srcset="img/phone1@2x.png 2x" alt="phone" width="525"
+                   height="528">
+            </picture>
+            <img class="phoneBox__ellipse" src="img/phone_ellipse.svg" alt="">
+            <img class="phoneBox__mask hidden-to-l" src="img/phone_mask.svg" alt="">
+            <div class="phoneBox__plate plate">
+              <div class="plate__item">
+                <span class="plate__title">Радиус поиска</span><br>
+                <span>3 км</span>
+              </div>
+              <div class="plate__item">
+                <span class="plate__title">Точка отсчета</span><br>
+                <span>Москва, ул. Олений Вал 1, корп 8.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell__2 cell__l-4">
+        <div class="box__header mt-10 hidden-to-s">
+          <h3 class="title-s">Находи друзей и&nbsp;создавай команды</h3>
+        </div>
+        <p class="text" style="max-width: 557px;">Не&nbsp;с&nbsp;кем выйти на&nbsp;пробежку в&nbsp;7&nbsp;утра? С&nbsp;детства
+          мечтали собрать
+          футбольную команду? С&nbsp;Active Friends все это становится реальным буквально в&nbsp;2&nbsp;клика. В&nbsp;любой
+          точке мира!</p>
+        <div class="box__footer text-mobCenter">
+          <button class="btn">Найти друзей</button>
+        </div>
+      </div>
+      <img class="scrollBox__back" src="img/phone_back.svg" alt="">
+    </div>
+    <div class="cells cells--indent scrollBox scrollBox--reverse">
+      <div class="cell__2 cell__l-4">
+        <div class="box__header mt-10 hidden-to-s">
+          <h3 class="title-s">Участвуй в&nbsp;мероприятиях</h3>
+        </div>
+        <p class="text" style="max-width: 513px;">Участвуй в&nbsp;массовых забегах, триатлонах, футбольных матчах. Для
+          любого спорта&nbsp;&mdash; своя карта событий. Более 1000 мероприятий и&nbsp;все это бесплатно в&nbsp;твоем
+          смартфоне.</p>
+        <div class="box__footer text-mobCenter">
+          <button class="btn">Участвовать</button>
+        </div>
+      </div>
+      <div class="cell__2 cell__l-4 scrollBox__picWrap">
+        <h3 class="title-s hidden-from-s box__header-mob">Участвуй в&nbsp;мероприятиях</h3>
+        <div class="scrollBox__pic">
+          <div class="phoneBox">
+            <picture>
+              <source srcset="img/phone2_mob.png, img/phone2_mob@2x.png 2x" media="(max-width: 640px)">
+              <source srcset="img/phone2.png, img/phone2@2x.png 2x">
+              <img class="phoneBox__img" src="img/phone2.png" srcset="img/phone2@2x.png 2x" alt="phone" width="525"
+                   height="528">
+            </picture>
+            <img class="phoneBox__ellipse" src="img/phone_ellipse_reverse.svg" alt="">
+            <img class="phoneBox__mask hidden-to-l" src="img/phone_mask_reverse.svg" alt="">
+            <div class="phoneBox__plate plate">
+              <div class="plate__title plate__title--m">Весенний TRAIL</div>
+              <span>24 мая</span><br>
+              <span>134 участника</span><br>
+              <span>Москва, ул. Московская, 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="scrollBox__back" src="img/phone_back_reverse.svg" alt="">
+    </div>
+    <div class="cells cells--indent scrollBox">
+      <div class="cell__2 cell__l-4 scrollBox__picWrap">
+        <h3 class="title-s hidden-from-s box__header-mob">Становись организатором и&nbsp;создавай мероприятия</h3>
+        <div class="scrollBox__pic">
+          <div class="phoneBox phoneBox--last">
+            <picture>
+              <source srcset="img/phone3_mob.png, img/phone3_mob@2x.png 2x" media="(max-width: 640px)">
+              <source srcset="img/phone3.png, img/phone3@2x.png 2x">
+              <img class="phoneBox__img" src="img/phone3.png" srcset="img/phone3@2x.png 2x" alt="phone" width="525"
+                   height="528">
+            </picture>
+            <img class="phoneBox__ellipse" src="img/phone_ellipse.svg" alt="">
+            <img class="phoneBox__mask hidden-to-l" src="img/phone_mask.svg" alt="">
+            <div class="phoneBox__plate phoneBox__plate--s plate plate--s">
+              <span class="plate__title">Сегодня, 23 мая</span><br>
+              <span>2 мероприятия</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell__2 cell__l-4">
+        <div class="box__header mt-10 hidden-to-s">
+          <h3 class="title-s">Становись организатором и&nbsp;создавай мероприятия</h3>
+        </div>
+        <p class="text" style="max-width: 557px;">Организуй спортивные мероприятия и&nbsp;собирай на&nbsp;них сотни
+          человек с&nbsp;помощью Active Friends! Удобный интерфейс, простая регистрация и&nbsp;легкий доступ помогут в&nbsp;этом!
+          Получи доступ к&nbsp;активной аудитории.</p>
+        <div class="box__footer text-mobCenter">
+          <button class="btn">Создать мероприятие</button>
+        </div>
+      </div>
+      <img class="scrollBox__back scrollBox__back--bottom" src="img/phone_back.svg" alt="">
+    </div>
+  </section>
+  <section class="box layout">
+    <div class="box box--withBack">
+      <div class="box__header">
+        <h2 class="title hidden-to-s">
+          <span>Создавай свое</span><br>
+          <span class="title__left title__left--m text-brand">будущее</span> <span>сегодня</span>
+        </h2>
+        <h2 class="title hidden-from-s">
+          <span>Создавай</span><br>
+          <span class="title__left">свое</span> <span class="text-brand">будущее</span><br>
+          <span>сегодня</span>
+        </h2>
+      </div>
+      <img class="box__pic hidden-to-s" src="img/future.png" srcset="img/future@2x.png 2x" alt="future">
+      <div class="box__pic box__pic--mob hidden-from-s"></div>
+      <p class="text">Не бойся делать первый шаг и ставить себе амбициозные цели!</p>
+    </div>
+    <div class="badgeWrap">
+      <div class="badge">Делись впечатлениями</div>
+      <div class="badge">Достигай цели</div>
+      <div class="badge">Побеждай</div>
+      <img class="badgeWrap__back" src="img/badge_back.svg" alt="">
+    </div>
+    <div class="box__footer text-center">
+      <button class="btn">Скачать приложение</button>
+    </div>
+  </section>
+  <section class="box box--m layout">
+    <div class="box__header">
+      <h2 class="title">
+        <span>Отзывы</span><br>
+        <span class="title__left title__left--m text-brand">пользователей</span>
+      </h2>
+    </div>
+    <div class="review">
+      <img class="review__back" src="img/review_back.svg" alt="">
+      <div class="review__content" style="max-width: 615px;">
+        <div class="title-xs mb-4">Mary_Goldenberg</div>
+        <p class="text">Использую приложение, как поиск впечатлений - если есть свободные выходные, захожу в
+          приложение и нахожу забег или какой-то классный трейл. Контент для инстаграма потом обеспечен на неделю)</p>
+        <img class="review__pic" src="img/review1.png" srcset="img/review1@2x.png 2x" alt="review">
+      </div>
+    </div>
+    <div class="review review--left">
+      <img class="review__back" src="img/review_back.svg" alt="">
+      <div class="review__content" style="max-width: 535px;">
+        <div class="title-xs mb-4">Игорь Шаповалов</div>
+        <p class="text">Я давно занимаюсь бегом, можно сказать, уже полупрофессионал. Я просто обожаю хорошо
+          организованные забеги, не банальные - вот собираюсь на горный трейл в Дагестан.</p>
+        <img class="review__pic" src="img/review2.png" srcset="img/review2@2x.png 2x" alt="review">
+      </div>
+    </div>
+    <div class="review review--flex">
+      <img class="review__back" src="img/review_back.svg" alt="">
+      <button class="btn hidden-to-l">Оставить отзыв</button>
+      <div class="review__content" style="max-width: 564px;">
+        <div class="title-xs mb-4">Danny_Run</div>
+        <p class="text">Всегда мечтал играть в баскет регулярно, готов был хоть по дворам ходить и искать - сейчас
+          буду собирать свою команду в приложении. Напишите там, чтобы присоединялись!</p>
+        <img class="review__pic" src="img/review3.png" srcset="img/review3@2x.png 2x" alt="review">
+      </div>
+    </div>
+    <div class="box__footer text-center hidden-from-l">
+      <button class="btn">Оставить отзыв</button>
+    </div>
+  </section>
+  <section id="events" class="box box--m layout slider">
+    <img class="slider__back" src="img/slider_back.svg" alt="">
+    <div class="box__header box__header--xl">
+      <h2 class="title">
+        <span>Активные</span><br>
+        <span class="title__left title__left--m text-brand">мероприятия</span>
+      </h2>
+    </div>
+    <div class="swiper-container">
+      <button class="swiper-button-next link link--load hidden-to-m"></button>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="cells cells--indent">
+            <div class="cell__2 cell__m-4">
+              <div class="slider__main">
+                <div class="box__header hidden-from-s">
+                  <h3 class="title-s" style="max-width: 563px;">6-8 августа состоится фестиваль Outdoor Festival
+                    Alpindustria
+                    Bezengi 2021</h3>
+                </div>
+                <img src="img/event1.png" srcset="img/event1@2x.png 2x" alt="event">
+                <button class="swiper-pagination"></button>
+              </div>
+            </div>
+            <div class="cell__2 cell__m-4 box slider__content">
+              <div class="box__header box__header--m hidden-to-s">
+                <h3 class="title-s" style="max-width: 563px;">6-8 августа состоится фестиваль Outdoor Festival
+                  Alpindustria
+                  Bezengi 2021</h3>
+              </div>
+              <p class="text" style="max-width: 522px;">Культовый горный район, куда раньше пускали только избранных, а&nbsp;ныне
+                открытый для всех. Настоящие горы, настоящие люди, настоящий альпинизм, дух и&nbsp;лучшие традиции
+                советского
+                альпинизма, которые бережно передаются следующим поколениям благодаря руководству лагеря. Сюда едут и&nbsp;за&nbsp;сложными
+                восхождениями, и&nbsp;за&nbsp;первым опытом в&nbsp;больших горах.</p>
+              <div class="box__footer hidden-to-m">
+                <button class="btn">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cells cells--indent">
+            <div class="cell__2 cell__m-4">
+              <div class="slider__main">
+                <img src="img/event2.png" srcset="img/event2@2x.png 2x" alt="event">
+                <button class="swiper-pagination"></button>
+              </div>
+            </div>
+            <div class="cell__2 cell__m-4 box slider__content">
+              <div class="box__header box__header--m">
+                <h3 class="title-s" style="max-width: 563px;">Wild Trail 31 июля – 1 августа Абзаково банное</h3>
+              </div>
+              <p class="text" style="max-width: 522px;">Удивительное беговое приключение среди потрясающих природных
+                ландшафтов, в&nbsp;полном загадок краю с&nbsp;богатой историей. Маршруты забегов проведут вас через
+                овеянные
+                легендами предгорья Южного Урала, по&nbsp;потаенным тропам, к&nbsp;местам, откуда открываются
+                фантастические
+                виды. Идеальный набор дистанций&nbsp;&mdash; от&nbsp;130 до&nbsp;11&nbsp;км с&nbsp;финишем на&nbsp;берегу
+                древнего озера Якты-Куль.</p>
+              <div class="box__footer hidden-to-m">
+                <button class="btn">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cells cells--indent">
+            <div class="cell__2 cell__m-4">
+              <div class="slider__main">
+                <img src="img/event3.png" srcset="img/event3@2x.png 2x" alt="event">
+                <button class="swiper-pagination"></button>
+              </div>
+            </div>
+            <div class="cell__2 cell__m-4 box slider__content">
+              <div class="box__header box__header--m">
+                <h3 class="title-s" style="max-width: 563px;"> Wild Trail Московская область 15 августа</h3>
+              </div>
+              <p class="text" style="max-width: 522px;">Трейловый забег с&nbsp;технически сложной трассой и&nbsp;постоянно
+                меняющимся рельефом: опасные спуски, броды, грязь, узкие тропы и&nbsp;заросшие дороги. На&nbsp;всех
+                дистанциях
+                участникам предстоит столкнуться с&nbsp;настоящим диким лесом, пробираться через завалы
+                и&nbsp;буреломы.</p>
+              <div class="box__footer hidden-to-m">
+                <button class="btn">Подробнее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box__footer text-center hidden-from-m">
+      <button class="btn">Подробнее</button>
+    </div>
+  </section>
+  <section id="impressions" class="box box--m slider slider--impress slider--bg">
+    <img class="slider__bg" src="img/impress_back.svg" alt="">
+    <div class="layout">
+      <div class="box__header box__header--xl">
+        <h2 class="title">
+          <span>Незабываемые</span><br>
+          <span class="title__left title__left--m text-brand">впечатления</span>
+        </h2>
+      </div>
+      <div class="swiper-container">
+        <button class="swiper-button-next link link--load hidden-to-m"></button>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cells cells--indent cells--flex">
+              <div class="cell__2 cell__m-4">
+                <div class="slider__reviews">
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/ser.png" srcset="img/ser@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">ser_vit</h5>
+                    </header>
+                    <div class="card__item">Супер! Увидимся на ГРУТ!</div>
+                  </div>
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/elena.png" srcset="img/elena@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">elenachrom</h5>
+                    </header>
+                    <div class="card__item">Отлично отработали! Я от себя не ожидала таких результатов!</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell__2 cell__m-4 order-m--1">
+                <div class="slider__main slider__main--right">
+                  <article class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/impress_user1.png" srcset="img/impress_user1@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">goldenringultratrail</h5>
+                    </header>
+                    <div class="card__item card__item--wide">Дорогие Атлеты, прошла неделя со&nbsp;старта CrazyOwl50, а&nbsp;эмоции
+                      ещё не&nbsp;утихли!
+                      Желаем быстрого восстановления и&nbsp;успешных стартов!
+                    </div>
+                    <div class="card__item">
+                      <img class="card__pic" src="img/impress1.png" srcset="img/impress1@2x.png 2x" alt="impress">
+                    </div>
+                    <div class="card__item text-right">1240 нравится, 14 комментариев</div>
+                  </article>
+                  <button class="swiper-pagination"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cells cells--indent cells--flex">
+              <div class="cell__2 cell__m-4">
+                <div class="slider__reviews">
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/storm.png" srcset="img/storm@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">storm55</h5>
+                    </header>
+                    <div class="card__item">Спасибо вам за этот праздник.</div>
+                  </div>
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/voronec.png" srcset="img/voronec@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">voronec_ka</h5>
+                    </header>
+                    <div class="card__item">Это было мощно!<img class="v-top" src="img/comm2fire.svg" alt="" width="20"
+                                                                height="21"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell__2 cell__m-4 order-m--1">
+                <div class="slider__main slider__main--right">
+                  <article class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/impress_user2.png" srcset="img/impress_user2@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">alpindustriatrail</h5>
+                    </header>
+                    <div class="card__item card__item--wide">8&nbsp;месяцев подготовки, больше 1000&nbsp;участников,
+                      5565
+                      фотографий и&nbsp;десятки гигабайт видео в&nbsp;обработке.
+                    </div>
+                    <div class="card__item">
+                      <img class="card__pic" src="img/impress2.png" srcset="img/impress2@2x.png 2x" alt="impress">
+                    </div>
+                    <div class="card__item text-right">212 нравится, 3 комментария</div>
+                  </article>
+                  <button class="swiper-pagination"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cells cells--indent cells--flex">
+              <div class="cell__2 cell__m-4">
+                <div class="slider__reviews">
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/vika.png" srcset="img/vika@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">vikavikavika</h5>
+                    </header>
+                    <div class="card__item">Я до сих пор ещё не отошла!<img class="v-top" src="img/comm1.svg" alt=""
+                                                                            width="60" height="21"></div>
+                  </div>
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/alex.png" srcset="img/alex@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">alexandra99</h5>
+                    </header>
+                    <div class="card__item">Спасибо большое вам за такое мероприятие
+                      <img class="v-top" src="img/comm2smile.svg" alt="" width="20" height="21"> и прекрасную
+                      организацию!!!<img class="v-top" src="img/comm2fire.svg" alt="" width="20" height="21">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell__2 cell__m-4 order-m--1">
+                <div class="slider__main slider__main--right">
+                  <article class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/impress_user3.png" srcset="img/impress_user3@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">xrace.wild.trail</h5>
+                    </header>
+                    <div class="card__item card__item--wide">то&nbsp;был невероятный Dagestan Wild Trail! Хотите заново
+                      окунуться в&nbsp;атмосферу гонки и&nbsp;пережить яркие моменты?
+                    </div>
+                    <div class="card__item">
+                      <img class="card__pic" src="img/impress3.png" srcset="img/impress3@2x.png 2x" alt="impress">
+                    </div>
+                    <div class="card__item text-right">1689 нравится, 10 комментариев</div>
+                  </article>
+                  <button class="swiper-pagination"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cells cells--indent cells--flex">
+              <div class="cell__2 cell__m-4">
+                <div class="slider__reviews">
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/masha.png" srcset="img/masha@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">alina_fit</h5>
+                    </header>
+                    <div class="card__item">В предвкушении старта<img class="v-top" src="img/comm2fire.svg" alt=""
+                                                                      width="20" height="21"></div>
+                  </div>
+                  <div class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/alex.png" srcset="img/alex@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">petr_vishnevskiy</h5>
+                    </header>
+                    <div class="card__item">Второй раз бежал у вас, и меня всё больше захватывает! Вы суперские!</div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell__2 cell__m-4 order-m--1">
+                <div class="slider__main slider__main--right">
+                  <article class="card">
+                    <header class="user">
+                      <img class="user__pic" src="img/impress_user3.png" srcset="img/impress_user3@2x.png 2x"
+                           alt="tan_elsa">
+                      <h5 class="title-xs">xrace.wild.trail</h5>
+                    </header>
+                    <div class="card__item card__item--wide">Пока не&nbsp;улеглась буря эмоций от&nbsp;гонки важно что
+                      сделать? Правильно, поскорее записаться на&nbsp;повтор!
+                    </div>
+                    <div class="card__item">
+                      <img class="card__pic" src="img/impress3.png" srcset="img/impress3@2x.png 2x" alt="impress">
+                    </div>
+                    <div class="card__item text-right">1300 нравится, 12 комментариев</div>
+                  </article>
+                  <button class="swiper-pagination"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__btn">
+          <button class="btn">Скачать приложение</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
+</main>
+<footer class="footer">
+  <div class="footer__wrap layout">
+    <div class="footer__left">
+      <img class="footer__logo" src="img/logo.svg" alt="logo" width="82" height="68">
+      <div class="mt-auto">
+        <span>ОГРНИП: 320774600356146</span><br>
+        <span>ИНН: 772748495940</span>
+      </div>
+    </div>
+    <div class="footer__center">
+      <div class="footer__item">
+        <span>СМИ, предложения сотрудничества</span><br>
+        <a href="mailto:info@active-friends.ru" class="link">info@active-friends.ru</a>
+      </div>
+      <div class="footer__item">
+        <span> Техническая поддержка</span><br>
+        <a href="mailto:support@active-friends.ru" class="link">support@active-friends.ru</a>
+      </div>
+      <a href="#" target="_blank" class="link link--minor footer__item footer__item--m">Пользовательское соглашение</a>
+      <a href="#" target="_blank" class="link link--minor footer__item footer__item--s">Политика конфиденциальности</a>
+    </div>
+    <div class="footer__right">
+      <div class="qr">
+        <div class="qr__item">
+          <div class="qr__title">AppStore</div>
+          <img src="img/app-store-qr.png" srcset="img/app-store-qr@2x.png 2x" alt="app store" width="86" height="86">
+        </div>
+        <div class="qr__item">
+          <div class="qr__title">Google Play</div>
+          <img src="img/google-play-qr.png" srcset="img/google-play-qr@2x.png 2x" alt="google play" width="86"
+               height="86">
+        </div>
+      </div>
+      <div class="footer__social social">
+        <div class="social__item">
+          <img src="img/instagram.svg" alt="инстаграм" width="24" height="24">
+          <div>instagram</div>
+        </div>
+        <div class="social__item">
+          <img src="img/vk.svg" alt="вконтакте" width="24" height="24">
+          <div>vkontakte</div>
+        </div>
+        <div class="social__item">
+          <img src="img/fb.svg" alt="фейсбук" width="24" height="24">
+          <div>facebook</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
