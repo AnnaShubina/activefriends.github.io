@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="intro">
+<section class="intro intro--animate">
+  <img class="intro__back hidden-to-xs" src="img/intro_back.svg" alt="">
   <div class="layout layout--l">
     <header class="header">
       <div class="header__logo">
@@ -20,11 +21,11 @@
       </div>
       <button class="link hidden-from-l js-menu-open"><img src="img/burger.svg" alt="menu" width="42" height="11">
       </button>
-      <nav class="nav hidden-to-l">
-        <div class="nav__link" data-ref="video">Видео</div>
-        <div class="nav__link" data-ref="opportunities">Возможности</div>
-        <div class="nav__link" data-ref="events">Мероприятия</div>
-        <div class="nav__link" data-ref="impressions">Впечатления</div>
+      <nav class="nav nav--animate hidden-to-l">
+        <button class="nav__link" data-ref="video">Видео</button>
+        <button class="nav__link" data-ref="opportunities">Возможности</button>
+        <button class="nav__link" data-ref="events">Мероприятия</button>
+        <button class="nav__link" data-ref="impressions">Впечатления</button>
       </nav>
       <div class="menuMobile js-menu">
         <div class="menuMobile__header">
@@ -73,7 +74,10 @@
     </header>
     <div class="intro__inner">
       <div class="intro__content">
-        <h1 class="title-l">
+        <h1 class="visually-hidden">Active Friends</h1>
+        <div class="intro__active hidden-to-m"></div>
+        <div class="intro__friends hidden-to-m"></div>
+        <h1 class="title-l hidden-from-m">
           <span>Active</span><br>
           <span class="title__left">Friends</span>
         </h1>
@@ -89,7 +93,20 @@
             <img src="img/google-play.svg" alt="google play" width="162" height="48">
           </a>
         </div>
-        <a href="#" class="link link--load intro__link hidden-to-l"></a>
+        <a href="#" class="link link--load intro__link hidden-to-l">
+          <svg class="link__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.11157 0.664551C5.11157 0.388408 4.88771 0.164551 4.61157 0.164551C4.33543 0.164551 4.11157 0.388408 4.11157 0.664551L5.11157 0.664551ZM4.25802 9.0181C4.45328 9.21337 4.76986 9.21337 4.96513 9.0181L8.14711 5.83612C8.34237 5.64086 8.34237 5.32428 8.14711 5.12902C7.95184 4.93376 7.63526 4.93376 7.44 5.12902L4.61157 7.95744L1.78314 5.12902C1.58788 4.93375 1.2713 4.93375 1.07604 5.12902C0.880776 5.32428 0.880776 5.64086 1.07604 5.83612L4.25802 9.0181ZM4.11157 0.664551L4.11157 8.66455L5.11157 8.66455L5.11157 0.664551L4.11157 0.664551Z"
+              fill="currentColor"/>
+          </svg>
+          <svg class="link__ellipse" width="141" height="85" viewBox="0 0 141 85" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M133.548 25.3752C134.435 28.6838 133.604 32.3381 131.239 36.1487C128.872 39.9604 124.994 43.8851 119.878 47.6899C109.649 55.2978 94.5595 62.3628 77.033 67.059C59.5064 71.7552 42.9058 73.1816 30.2434 71.7075C23.9106 70.9703 18.5894 69.5107 14.6343 67.3928C10.6802 65.2755 8.13406 62.5259 7.24752 59.2173C6.36098 55.9087 7.19119 52.2545 9.5569 48.4438C11.9232 44.6321 15.8017 40.7074 20.9174 36.9026C31.1464 29.2948 46.2361 22.2298 63.7627 17.5336C81.2892 12.8373 97.8898 11.4109 110.552 12.885C116.885 13.6222 122.206 15.0819 126.161 17.1997C130.115 19.317 132.662 22.0666 133.548 25.3752Z"
+              stroke="currentColor"/>
+          </svg>
+        </a>
       </div>
       <div class="intro__pic">
         <picture>
@@ -110,7 +127,7 @@
   </div>
 </section>
 <main class="main">
-  <section class="box box--l layout">
+  <section class="box box--l layout animation-wave">
     <div class="cells cells--indent">
       <div class="cell__2 cell__l-4">
         <div class="box__header box__header--xl">
@@ -121,23 +138,25 @@
           Посмотри, какие мероприятия придутся тебе по&nbsp;душе, и&nbsp;присоединяйся! Больше 100 мероприятий активно
           прямо сейчас.</p>
         <div class="box__footer hidden-to-s">
-          <button class="btn js-popover">Скачать приложение</button>
-<!--          <div class="popover">-->
-<!--            <div class="title-xs popover__title">Выбери подходящий store</div>-->
-<!--            <div class="popover__footer">-->
-<!--              <a href="#" class="link link&#45;&#45;app">-->
-<!--                <img src="img/app-store.svg" alt="app store" width="141" height="48">-->
-<!--              </a>-->
-<!--              <a href="#" class="link link&#45;&#45;app">-->
-<!--                <img src="img/google-play.svg" alt="google play" width="162" height="48">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </div>-->
+          <div class="popoverWrap">
+            <button class="btn js-popover">Скачать приложение</button>
+            <div class="popover">
+              <div class="title-xs popover__title">Выбери подходящий store</div>
+              <div class="popover__footer">
+                <a href="#" class="link link--app">
+                  <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                </a>
+                <a href="#" class="link link--app">
+                  <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="cell__2 cell__l-4">
         <div class="cardWrap">
-          <article class="card">
+          <article class="card card--main card--animate">
             <header class="user">
               <img class="user__pic" src="img/elsa.png" srcset="img/elsa@2x.png 2x" alt="tan_elsa">
               <h5 class="title-xs">tan_elsa</h5>
@@ -150,7 +169,7 @@
             </div>
             <div class="card__item text-right">56 нравится, 4 комментария</div>
           </article>
-          <article class="card card--bottomStick card--aside">
+          <article class="card card--bottomStick card--aside card--animate">
             <header class="user">
               <img class="user__pic" src="img/masha.png" srcset="img/masha@2x.png 2x" alt="masha_caz">
               <h5 class="title-xs">masha_caz</h5>
@@ -168,7 +187,7 @@
             </div>
           </article>
           <img class="cardWrap__decor" src="img/closer_decor.svg" alt="">
-          <img class="cardWrap__ellipse" src="img/closer_ellipse.svg" alt="">
+          <img class="cardWrap__ellipse cardWrap__ellipse--animate" src="img/closer_ellipse.svg" alt="">
         </div>
       </div>
     </div>
@@ -185,7 +204,7 @@
                   fill="currentColor"/>
           </svg>
         </button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7ZEsoV7kWAQ" title="YouTube video player"
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cd7Ol1cnGWI" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
@@ -200,10 +219,10 @@
       </h2>
     </div>
     <h3 class="title-s hidden-from-s box__header-mob">Находи друзей и&nbsp;создавай команды</h3>
-    <div class="cells cells--indent scrollBox">
+    <div class="cells cells--indent scrollBox animation-wave">
       <div class="cell__2 cell__l-4 scrollBox__picWrap">
         <div class="scrollBox__pic">
-          <div class="phoneBox">
+          <div class="phoneBox phoneBox--animate">
             <picture>
               <source srcset="img/phone1_mob.png, img/phone1_mob@2x.png 2x" media="(max-width: 640px)">
               <source srcset="img/phone1.png, img/phone1@2x.png 2x">
@@ -234,12 +253,25 @@
           футбольную команду? С&nbsp;Active Friends все это становится реальным буквально в&nbsp;2&nbsp;клика. В&nbsp;любой
           точке мира!</p>
         <div class="box__footer text-mobCenter">
-          <button class="btn">Найти друзей</button>
+          <div class="popoverWrap">
+            <button class="btn js-popover">Найти друзей</button>
+            <div class="popover">
+              <div class="title-xs popover__title">Выбери подходящий store</div>
+              <div class="popover__footer">
+                <a href="#" class="link link--app">
+                  <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                </a>
+                <a href="#" class="link link--app">
+                  <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <img class="scrollBox__back" src="img/phone_back.svg" alt="">
     </div>
-    <div class="cells cells--indent scrollBox scrollBox--reverse">
+    <div class="cells cells--indent scrollBox scrollBox--reverse animation-wave">
       <div class="cell__2 cell__l-4">
         <div class="box__header mt-10 hidden-to-s">
           <h3 class="title-s">Участвуй в&nbsp;мероприятиях</h3>
@@ -248,13 +280,26 @@
           любого спорта&nbsp;&mdash; своя карта событий. Более 1000 мероприятий и&nbsp;все это бесплатно в&nbsp;твоем
           смартфоне.</p>
         <div class="box__footer text-mobCenter">
-          <button class="btn">Участвовать</button>
+          <div class="popoverWrap">
+            <button class="btn js-popover">Участвовать</button>
+            <div class="popover">
+              <div class="title-xs popover__title">Выбери подходящий store</div>
+              <div class="popover__footer">
+                <a href="#" class="link link--app">
+                  <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                </a>
+                <a href="#" class="link link--app">
+                  <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="cell__2 cell__l-4 scrollBox__picWrap">
         <h3 class="title-s hidden-from-s box__header-mob">Участвуй в&nbsp;мероприятиях</h3>
         <div class="scrollBox__pic">
-          <div class="phoneBox">
+          <div class="phoneBox phoneBox--animate">
             <picture>
               <source srcset="img/phone2_mob.png, img/phone2_mob@2x.png 2x" media="(max-width: 640px)">
               <source srcset="img/phone2.png, img/phone2@2x.png 2x">
@@ -274,15 +319,16 @@
       </div>
       <img class="scrollBox__back" src="img/phone_back_reverse.svg" alt="">
     </div>
-    <div class="cells cells--indent scrollBox">
+    <div class="cells cells--indent scrollBox animation-wave">
       <div class="cell__2 cell__l-4 scrollBox__picWrap">
         <h3 class="title-s hidden-from-s box__header-mob">Становись организатором и&nbsp;создавай мероприятия</h3>
         <div class="scrollBox__pic">
-          <div class="phoneBox phoneBox--last">
+          <div class="phoneBox phoneBox--last phoneBox--animate">
             <picture>
               <source srcset="img/phone3_mob.png, img/phone3_mob@2x.png 2x" media="(max-width: 640px)">
               <source srcset="img/phone3.png, img/phone3@2x.png 2x">
-              <img class="phoneBox__img" src="img/phone3.png" srcset="img/phone3@2x.png 2x" alt="phone" width="525"
+              <img class="phoneBox__img phoneBox--animate" src="img/phone3.png" srcset="img/phone3@2x.png 2x"
+                   alt="phone" width="525"
                    height="528">
             </picture>
             <img class="phoneBox__ellipse" src="img/phone_ellipse.svg" alt="">
@@ -302,7 +348,20 @@
           человек с&nbsp;помощью Active Friends! Удобный интерфейс, простая регистрация и&nbsp;легкий доступ помогут в&nbsp;этом!
           Получи доступ к&nbsp;активной аудитории.</p>
         <div class="box__footer text-mobCenter">
-          <button class="btn">Создать мероприятие</button>
+          <div class="popoverWrap">
+            <button class="btn js-popover">Создать мероприятие</button>
+            <div class="popover">
+              <div class="title-xs popover__title">Выбери подходящий store</div>
+              <div class="popover__footer">
+                <a href="#" class="link link--app">
+                  <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                </a>
+                <a href="#" class="link link--app">
+                  <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <img class="scrollBox__back scrollBox__back--bottom" src="img/phone_back.svg" alt="">
@@ -332,7 +391,20 @@
       <img class="badgeWrap__back" src="img/badge_back.svg" alt="">
     </div>
     <div class="box__footer text-center">
-      <button class="btn">Скачать приложение</button>
+      <div class="popoverWrap">
+        <button class="btn js-popover">Скачать приложение</button>
+        <div class="popover">
+          <div class="title-xs popover__title">Выбери подходящий store</div>
+          <div class="popover__footer">
+            <a href="#" class="link link--app">
+              <img src="img/app-store.svg" alt="app store" width="141" height="48">
+            </a>
+            <a href="#" class="link link--app">
+              <img src="img/google-play.svg" alt="google play" width="162" height="48">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="box box--m layout">
@@ -362,7 +434,20 @@
     </div>
     <div class="review review--flex">
       <img class="review__back" src="img/review_back.svg" alt="">
-      <button class="btn hidden-to-l">Оставить отзыв</button>
+      <div class="popoverWrap">
+        <button class="btn hidden-to-l js-popover">Оставить отзыв</button>
+        <div class="popover">
+          <div class="title-xs popover__title">Выбери подходящий store</div>
+          <div class="popover__footer">
+            <a href="#" class="link link--app">
+              <img src="img/app-store.svg" alt="app store" width="141" height="48">
+            </a>
+            <a href="#" class="link link--app">
+              <img src="img/google-play.svg" alt="google play" width="162" height="48">
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="review__content" style="max-width: 564px;">
         <div class="title-xs mb-4">Danny_Run</div>
         <p class="text">Всегда мечтал играть в баскет регулярно, готов был хоть по дворам ходить и искать - сейчас
@@ -371,10 +456,23 @@
       </div>
     </div>
     <div class="box__footer text-center hidden-from-l">
-      <button class="btn">Оставить отзыв</button>
+      <div class="popoverWrap">
+        <button class="btn js-popover">Оставить отзыв</button>
+        <div class="popover">
+          <div class="title-xs popover__title">Выбери подходящий store</div>
+          <div class="popover__footer">
+            <a href="#" class="link link--app">
+              <img src="img/app-store.svg" alt="app store" width="141" height="48">
+            </a>
+            <a href="#" class="link link--app">
+              <img src="img/google-play.svg" alt="google play" width="162" height="48">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="events" class="box box--m layout slider">
+  <section id="events" class="box layout slider">
     <img class="slider__back" src="img/slider_back.svg" alt="">
     <div class="box__header box__header--xl">
       <h2 class="title">
@@ -383,7 +481,20 @@
       </h2>
     </div>
     <div class="swiper-container">
-      <button class="swiper-button-next link link--load hidden-to-m"></button>
+      <button class="swiper-button-next link link--load hidden-to-m">
+        <svg class="link__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.11157 0.664551C5.11157 0.388408 4.88771 0.164551 4.61157 0.164551C4.33543 0.164551 4.11157 0.388408 4.11157 0.664551L5.11157 0.664551ZM4.25802 9.0181C4.45328 9.21337 4.76986 9.21337 4.96513 9.0181L8.14711 5.83612C8.34237 5.64086 8.34237 5.32428 8.14711 5.12902C7.95184 4.93376 7.63526 4.93376 7.44 5.12902L4.61157 7.95744L1.78314 5.12902C1.58788 4.93375 1.2713 4.93375 1.07604 5.12902C0.880776 5.32428 0.880776 5.64086 1.07604 5.83612L4.25802 9.0181ZM4.11157 0.664551L4.11157 8.66455L5.11157 8.66455L5.11157 0.664551L4.11157 0.664551Z"
+            fill="currentColor"/>
+        </svg>
+        <svg class="link__ellipse" width="141" height="85" viewBox="0 0 141 85" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M133.548 25.3752C134.435 28.6838 133.604 32.3381 131.239 36.1487C128.872 39.9604 124.994 43.8851 119.878 47.6899C109.649 55.2978 94.5595 62.3628 77.033 67.059C59.5064 71.7552 42.9058 73.1816 30.2434 71.7075C23.9106 70.9703 18.5894 69.5107 14.6343 67.3928C10.6802 65.2755 8.13406 62.5259 7.24752 59.2173C6.36098 55.9087 7.19119 52.2545 9.5569 48.4438C11.9232 44.6321 15.8017 40.7074 20.9174 36.9026C31.1464 29.2948 46.2361 22.2298 63.7627 17.5336C81.2892 12.8373 97.8898 11.4109 110.552 12.885C116.885 13.6222 122.206 15.0819 126.161 17.1997C130.115 19.317 132.662 22.0666 133.548 25.3752Z"
+            stroke="currentColor"/>
+        </svg>
+      </button>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="cells cells--indent">
@@ -410,7 +521,20 @@
                 альпинизма, которые бережно передаются следующим поколениям благодаря руководству лагеря. Сюда едут и&nbsp;за&nbsp;сложными
                 восхождениями, и&nbsp;за&nbsp;первым опытом в&nbsp;больших горах.</p>
               <div class="box__footer hidden-to-m">
-                <button class="btn">Подробнее</button>
+                <div class="popoverWrap">
+                  <button class="btn js-popover">Подробнее</button>
+                  <div class="popover">
+                    <div class="title-xs popover__title">Выбери подходящий store</div>
+                    <div class="popover__footer">
+                      <a href="#" class="link link--app">
+                        <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                      </a>
+                      <a href="#" class="link link--app">
+                        <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -438,7 +562,20 @@
                 виды. Идеальный набор дистанций&nbsp;&mdash; от&nbsp;130 до&nbsp;11&nbsp;км с&nbsp;финишем на&nbsp;берегу
                 древнего озера Якты-Куль.</p>
               <div class="box__footer hidden-to-m">
-                <button class="btn">Подробнее</button>
+                <div class="popoverWrap">
+                  <button class="btn js-popover">Подробнее</button>
+                  <div class="popover">
+                    <div class="title-xs popover__title">Выбери подходящий store</div>
+                    <div class="popover__footer">
+                      <a href="#" class="link link--app">
+                        <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                      </a>
+                      <a href="#" class="link link--app">
+                        <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -464,7 +601,20 @@
                 участникам предстоит столкнуться с&nbsp;настоящим диким лесом, пробираться через завалы
                 и&nbsp;буреломы.</p>
               <div class="box__footer hidden-to-m">
-                <button class="btn">Подробнее</button>
+                <div class="popoverWrap">
+                  <button class="btn js-popover">Подробнее</button>
+                  <div class="popover">
+                    <div class="title-xs popover__title">Выбери подходящий store</div>
+                    <div class="popover__footer">
+                      <a href="#" class="link link--app">
+                        <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                      </a>
+                      <a href="#" class="link link--app">
+                        <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -473,10 +623,23 @@
       <button class="swiper-pagination hidden-from-s"></button>
     </div>
     <div class="text-center hidden-from-m">
-      <button class="btn">Подробнее</button>
+      <div class="popoverWrap">
+        <button class="btn js-popover">Подробнее</button>
+        <div class="popover">
+          <div class="title-xs popover__title">Выбери подходящий store</div>
+          <div class="popover__footer">
+            <a href="#" class="link link--app">
+              <img src="img/app-store.svg" alt="app store" width="141" height="48">
+            </a>
+            <a href="#" class="link link--app">
+              <img src="img/google-play.svg" alt="google play" width="162" height="48">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="impressions" class="box box--m slider slider--impress slider--bg">
+  <section id="impressions" class="box slider slider--impress slider--bg animation-wave">
     <img class="slider__bg" src="img/impress_back.svg" alt="">
     <div class="layout">
       <div class="box__header box__header--xl">
@@ -486,13 +649,26 @@
         </h2>
       </div>
       <div class="swiper-container">
-        <button class="swiper-button-next link link--load hidden-to-m"></button>
+        <button class="swiper-button-next link link--load hidden-to-m">
+          <svg class="link__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.11157 0.664551C5.11157 0.388408 4.88771 0.164551 4.61157 0.164551C4.33543 0.164551 4.11157 0.388408 4.11157 0.664551L5.11157 0.664551ZM4.25802 9.0181C4.45328 9.21337 4.76986 9.21337 4.96513 9.0181L8.14711 5.83612C8.34237 5.64086 8.34237 5.32428 8.14711 5.12902C7.95184 4.93376 7.63526 4.93376 7.44 5.12902L4.61157 7.95744L1.78314 5.12902C1.58788 4.93375 1.2713 4.93375 1.07604 5.12902C0.880776 5.32428 0.880776 5.64086 1.07604 5.83612L4.25802 9.0181ZM4.11157 0.664551L4.11157 8.66455L5.11157 8.66455L5.11157 0.664551L4.11157 0.664551Z"
+              fill="currentColor"/>
+          </svg>
+          <svg class="link__ellipse" width="141" height="85" viewBox="0 0 141 85" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M133.548 25.3752C134.435 28.6838 133.604 32.3381 131.239 36.1487C128.872 39.9604 124.994 43.8851 119.878 47.6899C109.649 55.2978 94.5595 62.3628 77.033 67.059C59.5064 71.7552 42.9058 73.1816 30.2434 71.7075C23.9106 70.9703 18.5894 69.5107 14.6343 67.3928C10.6802 65.2755 8.13406 62.5259 7.24752 59.2173C6.36098 55.9087 7.19119 52.2545 9.5569 48.4438C11.9232 44.6321 15.8017 40.7074 20.9174 36.9026C31.1464 29.2948 46.2361 22.2298 63.7627 17.5336C81.2892 12.8373 97.8898 11.4109 110.552 12.885C116.885 13.6222 122.206 15.0819 126.161 17.1997C130.115 19.317 132.662 22.0666 133.548 25.3752Z"
+              stroke="currentColor"/>
+          </svg>
+        </button>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="cells cells--indent cells--flex">
               <div class="cell__2 cell__m-4">
                 <div class="slider__reviews">
-                  <div class="card">
+                  <div class="card card--commentTop">
                     <header class="user">
                       <img class="user__pic" src="img/ser.png" srcset="img/ser@2x.png 2x"
                            alt="tan_elsa">
@@ -500,7 +676,7 @@
                     </header>
                     <div class="card__item">Супер! Увидимся на ГРУТ!</div>
                   </div>
-                  <div class="card">
+                  <div class="card card--commentBottom">
                     <header class="user">
                       <img class="user__pic" src="img/elena.png" srcset="img/elena@2x.png 2x"
                            alt="tan_elsa">
@@ -512,7 +688,7 @@
               </div>
               <div class="cell__2 cell__m-4 order-m--1">
                 <div class="slider__main slider__main--right">
-                  <article class="card">
+                  <article class="card card--appear">
                     <header class="user">
                       <img class="user__pic" src="img/impress_user1.png" srcset="img/impress_user1@2x.png 2x"
                            alt="tan_elsa">
@@ -671,7 +847,20 @@
         </div>
         <button class="swiper-pagination hidden-from-m"></button>
         <div class="slider__btn">
-          <button class="btn">Скачать приложение</button>
+          <div class="popoverWrap">
+            <button class="btn js-popover">Скачать приложение</button>
+            <div class="popover">
+              <div class="title-xs popover__title">Выбери подходящий store</div>
+              <div class="popover__footer">
+                <a href="#" class="link link--app">
+                  <img src="img/app-store.svg" alt="app store" width="141" height="48">
+                </a>
+                <a href="#" class="link link--app">
+                  <img src="img/google-play.svg" alt="google play" width="162" height="48">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -682,9 +871,10 @@
     <div class="footer__wrap">
       <div class="footer__left">
         <img class="footer__logo" src="img/logo.svg" alt="logo" width="82" height="68">
-        <div class="mt-auto">
-          <span>ОГРНИП: 320774600356146</span><br>
-          <span>ИНН: 772748495940</span>
+        <div class="mt-auto lh-1-2">
+          <span>ОО "Бласкор"</span><br>
+          <span>7729491590</span><br>
+          <span>1167746124270</span>
         </div>
       </div>
       <div class="footer__center">
@@ -696,8 +886,10 @@
           <span> Техническая поддержка</span><br>
           <a href="mailto:support@active-friends.ru" class="link">support@active-friends.ru</a>
         </div>
-        <a href="#" target="_blank" class="link link--minor footer__item footer__item--m">Пользовательское соглашение</a>
-        <a href="#" target="_blank" class="link link--minor footer__item footer__item--s">Политика конфиденциальности</a>
+        <a href="#" target="_blank" class="link link--minor footer__item footer__item--m">Пользовательское
+          соглашение</a>
+        <a href="#" target="_blank" class="link link--minor footer__item footer__item--s">Политика
+          конфиденциальности</a>
       </div>
       <div class="footer__right">
         <div class="qr">
