@@ -16,7 +16,7 @@
   <div class="layout layout--l">
     <header class="header">
       <div class="header__logo">
-        <img src="img/logo.svg" alt="logo" width="39" height="32">
+        <img src="img/logo.svg" alt="logo" width="32" height="34">
       </div>
       <button class="link hidden-from-l js-menu-open"><img src="img/burger.svg" alt="menu" width="42" height="11">
       </button>
@@ -92,7 +92,7 @@
             <img src="img/google-play.svg" alt="google play" width="162" height="48">
           </a>
         </div>
-        <a href="#" class="link link--load intro__link hidden-to-l">
+        <button class="link link--load intro__link hidden-to-l" data-ref="closer">
           <svg class="link__arrow" width="9" height="10" viewBox="0 0 9 10" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path
@@ -105,7 +105,7 @@
               d="M133.548 25.3752C134.435 28.6838 133.604 32.3381 131.239 36.1487C128.872 39.9604 124.994 43.8851 119.878 47.6899C109.649 55.2978 94.5595 62.3628 77.033 67.059C59.5064 71.7552 42.9058 73.1816 30.2434 71.7075C23.9106 70.9703 18.5894 69.5107 14.6343 67.3928C10.6802 65.2755 8.13406 62.5259 7.24752 59.2173C6.36098 55.9087 7.19119 52.2545 9.5569 48.4438C11.9232 44.6321 15.8017 40.7074 20.9174 36.9026C31.1464 29.2948 46.2361 22.2298 63.7627 17.5336C81.2892 12.8373 97.8898 11.4109 110.552 12.885C116.885 13.6222 122.206 15.0819 126.161 17.1997C130.115 19.317 132.662 22.0666 133.548 25.3752Z"
               stroke="currentColor"/>
           </svg>
-        </a>
+        </button>
       </div>
       <div class="intro__pic">
         <picture>
@@ -126,7 +126,7 @@
   </div>
 </section>
 <main class="main">
-  <section class="box box--l layout animation-wave">
+  <section id="closer" class="box box--l layout animation-wave parallaxWrap">
     <div class="cells cells--indent">
       <div class="cell__2 cell__l-4">
         <div class="box__header box__header--xl">
@@ -155,7 +155,7 @@
       </div>
       <div class="cell__2 cell__l-4">
         <div class="cardWrap">
-          <article class="card card--main card--animate">
+          <article class="card card--main card--animate parallax">
             <header class="user">
               <img class="user__pic" src="img/elsa.png" srcset="img/elsa@2x.png 2x" alt="tan_elsa">
               <h5 class="title-xs">tan_elsa</h5>
@@ -168,7 +168,7 @@
             </div>
             <div class="card__item text-right">56 нравится, 4 комментария</div>
           </article>
-          <article class="card card--bottomStick card--aside card--animate">
+          <article class="card card--bottomStick card--aside card--animate parallax" data-reverse="-1">
             <header class="user">
               <img class="user__pic" src="img/masha.png" srcset="img/masha@2x.png 2x" alt="masha_caz">
               <h5 class="title-xs">masha_caz</h5>
@@ -869,11 +869,12 @@
   <div class="layout">
     <div class="footer__wrap">
       <div class="footer__left">
-        <img class="footer__logo" src="img/logo.svg" alt="logo" width="82" height="68">
+        <img class="footer__logo" src="img/logo.svg" alt="logo" width="32" height="34">
+        <img class="footer__logo" src="img/logo-full.svg" alt="logo" width="138" height="17">
         <div class="mt-auto lh-1-2">
-          <span>ОО "Бласкор"</span><br>
-          <span>7729491590</span><br>
-          <span>1167746124270</span>
+          <span>ООО "Бласкор"</span><br>
+          <span>ОГРНИП: 7729491590</span><br>
+          <span>ИНН: 1167746124270</span>
         </div>
       </div>
       <div class="footer__center">
@@ -893,11 +894,17 @@
       <div class="footer__right">
         <div class="qr">
           <div class="qr__item">
-            <div class="qr__title">AppStore</div>
+            <div class="qr__title">
+              <img src="img/apple.svg" alt="apple" width="15" height="18">
+              AppStore
+            </div>
             <img src="img/app-store-qr.png" srcset="img/app-store-qr@2x.png 2x" alt="app store" width="86" height="86">
           </div>
           <div class="qr__item">
-            <div class="qr__title">Google Play</div>
+            <div class="qr__title">
+              <img src="img/google.svg" alt="google" width="14" height="16">
+              Google Play
+            </div>
             <img src="img/google-play-qr.png" srcset="img/google-play-qr@2x.png 2x" alt="google play" width="86"
                  height="86">
           </div>
