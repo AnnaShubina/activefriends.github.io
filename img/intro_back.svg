@@ -8,7 +8,6 @@
                 from="0 1051, 870"
                 to="360 1051, 870"
                 type="rotate"
-                additive="sum"
                 calcMode="linear"
                 repeatCount="indefinite"
                 dur="40s"/>
